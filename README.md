@@ -29,3 +29,13 @@ First we need to create the `db` directory where the database files will live in
 ### Run the Application
 
     npm run dev
+
+### routes
+
+
+| Route           |    description              |  protected  |
+| ------------    | --------------------------  | ----------- |
+|`/movies`        | `get all movies`            |     `yes`   |
+|`/movies/id`     | `used to toggle favorite`   |     `yes`   |
+|`/register`      | `create new user`           |     `no`    |
+|`/login`         | `login user`                |     `no`    |
