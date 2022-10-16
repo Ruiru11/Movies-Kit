@@ -8,7 +8,8 @@ const moviesRoutes = require("./routes/endpoints/movies");
 const userRoutes = require("./routes/api/users");
 
 // Set up default mongoose connection
-const mongoDB = "mongodb://127.0.0.1/movieDb";
+const mongoDB =
+  "mongodb://mongo:gwT5kxI3JYI0pttGkHve@containers-us-west-91.railway.app:6338";
 mongoose
   .connect(mongoDB, { useNewUrlParser: true })
   .then(() => console.log("connection to the database successful"))
@@ -79,7 +80,7 @@ app.use(passport.initialize());
 require("./utils/Config/passport")(passport);
 app.use("/api/v1/", moviesRoutes);
 app.use("/api/users", userRoutes);
-const PORT = 3000;
+const PORT = process.env.PORT || 3030;
 
 app.listen(PORT, (error) => {
   if (error) {
