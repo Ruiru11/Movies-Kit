@@ -9,7 +9,7 @@
     "compile": "node dist/server.js",
     "start": "nodemon --exec babel-node index.js",
     "dev": "nodemon --exec babel-node index.js",
-    "server": "nodemon index.js babel-node -- index.js"
+    "server": "node --exec babel-node index.js"
   },
   "repository": {
     "type": "git",
